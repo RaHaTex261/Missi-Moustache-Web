@@ -25,6 +25,6 @@ const MessageSchema = new mongoose.Schema({
         enum: ['text', 'audio'],
         default: 'text'
     }
-});
+}, { collection: 'message' }); // Spécification explicite de la collection
 
-module.exports = mongoose.model('Message', MessageSchema, 'message');
+module.exports = mongoose.model('Message', MessageSchema);
