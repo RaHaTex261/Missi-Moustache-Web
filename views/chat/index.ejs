@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title><%= title %></title>
+</head>
+<body>
+    <!-- Titre principal de l'application de chat -->
+    <h1 class="title">Ndao-Iresaka 💬</h1>
+
+    <!-- Section principale contenant le chat -->
+    <div class="main">
+        <!-- Zone de saisie du nom d'utilisateur -->
+        <div class="name">
+            <span><i class="far fa-user"></i></span>
+            <input
+                type="text"
+                id="name-input"
+                class="name-input"
+                value="anonymous"
+                maxlength="20"
+            />
+        </div>
+
+        <!-- Conteneur des messages -->
+        <ul class="message-container" id="message-container"></ul>
+
+        <!-- Formulaire d'envoi de message -->
+        <form class="message-form" id="message-form">
+            <!-- Champ de saisie du message texte -->
+            <input
+                type="text"
+                name="message"
+                id="message-input"
+                class="message-input"
+                placeholder="Écris un message ou enregistre 🎤"
+            />
+            <!-- Séparateur vertical -->
+            <div class="v-divider"></div>
+
+            <!-- Bouton d'enregistrement vocal -->
+            <button type="button" class="mic-button" id="mic-button" title="Envoyer un message vocal">
+                <i class="fas fa-microphone"></i>
+            </button>
+
+            <!-- Bouton d'envoi du message -->
+            <button type="submit" class="send-button">
+                Envoyer <span><i class="fas fa-paper-plane"></i></span>
+            </button>
+        </form>
+    </div>
+    <h3 class="clients-total" id="client-total">Clients connectés: 0</h3>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.28.0/moment.min.js"
+        integrity="sha512-Q1f3TS3vSt1jQ8AwP2OuenztnLU6LwxgyyYOG1jgMW/cbEMHps/3wjvnl1P3WTrF3chJUWEoxDUEjMxDV8pujg=="
+        crossorigin="anonymous"
+    ></script>
+    <script src="/js/chat.js"></script>
+</body>
+</html>
