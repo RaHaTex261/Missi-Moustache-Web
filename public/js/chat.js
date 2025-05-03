@@ -175,17 +175,29 @@ class ChatApp {
     // Gestion de la réception des messages audio
     handleIncomingAudio(data) {
         try {
-            // Jouer le son pour tous les messages entrants, sauf ceux envoyés par cet utilisateur
+            // Jouer le son de notification pour les messages entrants
             if (data.socketId !== this.socket.id) {
                 this.messageTone.currentTime = 0;
                 this.messageTone.play().catch(err => 
                     console.warn('Erreur lors de la lecture du son:', err)
                 );
             }
+
+            // S'assurer que les données audio sont valides
+            if (!data.audio || !data.audio.startsWith('data:audio')) {
+                console.error('Format audio invalide:', data);
+                return;
+            }
+
+            this.addAudioMessageToUI(false, {
+                ...data,
+                audio: data.audio,  // Utiliser directement les données audio reçues
+                name: data.name || 'Utilisateur',
+                dateTime: data.timestamp || new Date()
+            });
         } catch (err) {
-            console.warn('Erreur avec la notification sonore:', err);
+            console.error('Erreur lors de la réception du message audio:', err);
         }
-        this.addAudioMessageToUI(false, data);
     }
 
     // Ajout d'un message texte à l'interface utilisateur
@@ -210,14 +222,23 @@ class ChatApp {
         const element = `
             <li class="${isOwnMessage ? "message-right" : "message-left"}">
                 <p class="message">
-                    🎧 Message vocal :
-                    <audio controls src="${data.audio}"></audio>
+                    🎧 Message vocal
+                    <audio controls controlsList="nodownload">
+                        <source src="${data.audio}" type="audio/webm">
+                        Votre navigateur ne supporte pas la lecture audio.
+                    </audio>
                     <span>${data.name} ● ${moment(data.dateTime).fromNow()}</span>
                 </p>
             </li>
         `;
         this.messageContainer.innerHTML += element;
         this.scrollToBottom();
+
+        // Activer automatiquement les contrôles audio
+        const lastAudio = this.messageContainer.querySelector('li:last-child audio');
+        if (lastAudio) {
+            lastAudio.load();
+        }
     }
 
     // Gestion du feedback de saisie

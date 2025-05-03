@@ -91,8 +91,8 @@ const messagesController = {
         try {
             // Créer un nouveau message audio avec les IDs MongoDB
             const message = new Message({
-                senderId: new mongoose.Types.ObjectId(), // Simuler un ID utilisateur pour le moment
-                receiverId: new mongoose.Types.ObjectId(), // Simuler un ID destinataire pour le moment
+                senderId: data.senderId || new mongoose.Types.ObjectId(),
+                receiverId: data.receiverId || new mongoose.Types.ObjectId(),
                 content: data.audio,
                 type: 'audio',
                 timestamp: new Date()
@@ -104,16 +104,19 @@ const messagesController = {
             // Émettre le message audio aux autres utilisateurs
             socket.broadcast.emit('audio-message', {
                 id: message._id,
+                audio: data.audio, // Envoi des données audio brutes
                 content: message.content,
                 senderId: message.senderId,
                 receiverId: message.receiverId,
                 name: data.name,
                 timestamp: message.timestamp,
-                type: 'audio'
+                type: 'audio',
+                socketId: data.socketId
             });
 
         } catch (err) {
             console.error('Erreur lors de l\'enregistrement du message audio:', err);
+            socket.emit('error', { message: 'Erreur lors de l\'envoi du message audio' });
         }
     }
 };
