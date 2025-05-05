@@ -18,16 +18,21 @@
 
     <!-- Section principale contenant le chat -->
     <div class="main">
-        <!-- Zone de saisie du nom d'utilisateur -->
+        <!-- Zone de saisie du nom d'utilisateur et déconnexion -->
         <div class="name">
-            <span><i class="far fa-user"></i></span>
-            <input
-                type="text"
-                id="name-input"
-                class="name-input"
-                value="anonymous"
-                maxlength="20"
-            />
+            <div class="user-info">
+                <span><i class="far fa-user"></i></span>
+                <input
+                    type="text"
+                    id="name-input"
+                    class="name-input"
+                    value="anonymous"
+                    maxlength="20"
+                />
+            </div>
+            <button id="logout-button" class="logout-button">
+                <i class="fas fa-sign-out-alt"></i> Déconnexion
+            </button>
         </div>
 
         <!-- Conteneur des messages -->

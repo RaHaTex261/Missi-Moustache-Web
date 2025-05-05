@@ -54,6 +54,24 @@ class ChatApp {
 
         // Gestion du bouton microphone pour l'enregistrement vocal
         this.micButton.addEventListener("click", () => this.handleMicClick());
+
+        // Gestion de la déconnexion
+        document.getElementById('logout-button').addEventListener('click', () => {
+            // Appel à la route de déconnexion
+            fetch('/api/auth/logout', {
+                method: 'POST',
+                credentials: 'include' // Pour inclure les cookies
+            })
+            .then(() => {
+                // Redirection vers la page de connexion
+                window.location.href = '/login';
+            })
+            .catch(err => {
+                console.error('Erreur lors de la déconnexion:', err);
+                // Redirection même en cas d'erreur
+                window.location.href = '/login';
+            });
+        });
     }
 
     // Configuration des écouteurs de socket pour les événements du serveur
