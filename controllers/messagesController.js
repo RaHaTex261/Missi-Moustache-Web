@@ -126,6 +126,35 @@ const messagesController = {
             console.error('Erreur lors de l\'enregistrement du message audio:', err);
             socket.emit('error', { message: 'Erreur lors de l\'envoi du message audio' });
         }
+    },
+
+    // Marquer les messages comme lus
+    async markMessagesAsRead(req, res) {
+        try {
+            const { recipientId } = req.params;
+
+            // Mettre à jour tous les messages non lus de cette conversation
+            await Message.updateMany(
+                {
+                    senderId: recipientId,
+                    receiverId: req.user.id,
+                    isRead: false
+                },
+                {
+                    isRead: true
+                }
+            );
+
+            // Émettre un événement pour informer l'expéditeur que ses messages ont été lus
+            req.app.get('io').to(recipientId).emit('messages-read', {
+                readBy: req.user.id
+            });
+
+            res.json({ success: true });
+        } catch (err) {
+            console.error('Erreur lors du marquage des messages comme lus:', err);
+            res.status(500).json({ message: 'Erreur serveur' });
+        }
     }
 };
 

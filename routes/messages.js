@@ -7,5 +7,6 @@ router.get('/', authMiddleware, messagesController.getAllMessages);
 router.get('/:recipientId', authMiddleware, messagesController.getConversation);
 router.post('/', authMiddleware, messagesController.sendMessage);
 router.delete('/:id', authMiddleware, messagesController.deleteMessage);
+router.put('/:recipientId/read', authMiddleware, messagesController.markMessagesAsRead);
 
 module.exports = router;

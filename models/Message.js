@@ -24,6 +24,10 @@ const MessageSchema = new mongoose.Schema({
         type: String,
         enum: ['text', 'audio'],
         default: 'text'
+    },
+    isRead: {
+        type: Boolean,
+        default: false
     }
 }, { collection: 'message' }); // Spécification explicite de la collection
 

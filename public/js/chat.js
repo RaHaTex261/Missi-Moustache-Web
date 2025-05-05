@@ -42,14 +42,43 @@ class ChatApp {
         // Initialiser le système de keep-alive
         this.initializeKeepAlive();
 
-        // Charger les informations de l'utilisateur connecté
-        this.loadUserInfo();
+        // Charger les données initiales
+        this.init();
 
-        // Charger les utilisateurs initialement
-        this.loadUsers();
+        this.unreadMessages = new Map(); // Pour stocker le nombre de messages non lus par utilisateur
+    }
 
-        // Rafraîchir la liste des utilisateurs toutes les 10 secondes
-        setInterval(() => this.loadUsers(), 10000);
+    async init() {
+        try {
+            // Charger les informations de l'utilisateur
+            await this.loadUserInfo();
+            
+            // Charger tous les utilisateurs
+            const users = await this.loadUsers();
+            
+            // Récupérer le dernier chat actif
+            const lastActiveChat = localStorage.getItem('lastActiveChat');
+            if (lastActiveChat) {
+                const lastActiveChatUser = users.find(user => user._id === lastActiveChat);
+                if (lastActiveChatUser) {
+                    // Simuler la sélection de l'utilisateur
+                    this.currentRecipient = {
+                        _id: lastActiveChatUser._id,
+                        username: lastActiveChatUser.username,
+                        statut: lastActiveChatUser.statut
+                    };
+                    
+                    // Mettre à jour l'interface utilisateur
+                    this.updateRecipientInfo();
+                    this.updateUsersList(users);
+                    
+                    // Charger la conversation
+                    await this.loadConversation(lastActiveChat);
+                }
+            }
+        } catch (err) {
+            console.error('Erreur lors de l\'initialisation:', err);
+        }
     }
 
     // Sélection des éléments du DOM
@@ -127,6 +156,13 @@ class ChatApp {
                     dateTime: data.dateTime,
                     socketId: data.socketId
                 });
+                // Marquer automatiquement comme lu si la conversation est ouverte
+                this.markMessagesAsRead(data.senderId);
+            } else {
+                // Incrémenter le compteur de messages non lus
+                const currentCount = this.unreadMessages.get(data.senderId) || 0;
+                this.unreadMessages.set(data.senderId, currentCount + 1);
+                this.updateUsersList(this.users); // Mettre à jour l'affichage
             }
         });
 
@@ -138,6 +174,24 @@ class ChatApp {
                     name: this.currentRecipient.username,
                     dateTime: data.dateTime,
                     socketId: data.socketId
+                });
+                // Marquer automatiquement comme lu si la conversation est ouverte
+                this.markMessagesAsRead(data.senderId);
+            } else {
+                // Incrémenter le compteur de messages non lus
+                const currentCount = this.unreadMessages.get(data.senderId) || 0;
+                this.unreadMessages.set(data.senderId, currentCount + 1);
+                this.updateUsersList(this.users); // Mettre à jour l'affichage
+            }
+        });
+
+        // Écouter l'événement de messages lus
+        this.socket.on('messages-read', (data) => {
+            // Si quelqu'un a lu nos messages, on peut mettre à jour l'interface
+            if (this.currentRecipient?._id === data.readBy) {
+                // Mettre à jour les indicateurs de lecture dans l'interface
+                document.querySelectorAll('.message-right .message').forEach(msg => {
+                    msg.classList.add('read');
                 });
             }
         });
@@ -157,6 +211,24 @@ class ChatApp {
             // Recharger les informations utilisateur lors de la reconnexion
             await this.loadUserInfo();
         });
+    }
+
+    // Charger les utilisateurs et la dernière conversation active
+    async loadInitialData() {
+        await this.loadUserInfo();
+        const users = await this.loadUsers();
+        
+        // Récupérer la dernière conversation active depuis le localStorage
+        const lastActiveChat = localStorage.getItem('lastActiveChat');
+        if (lastActiveChat) {
+            const user = users.find(u => u._id === lastActiveChat);
+            if (user) {
+                const userItem = document.querySelector(`[data-user-id="${user._id}"]`);
+                if (userItem) {
+                    this.handleUserSelect(userItem);
+                }
+            }
+        }
     }
 
     // Gestion de la soumission du formulaire de message
@@ -216,10 +288,12 @@ class ChatApp {
             if (response.ok) {
                 const users = await response.json();
                 this.updateUsersList(users);
+                return users;
             }
         } catch (err) {
             console.error('Erreur lors du chargement des utilisateurs:', err);
         }
+        return [];
     }
 
     // Nouvelle méthode pour mettre à jour la liste des utilisateurs dans l'interface
@@ -230,6 +304,9 @@ class ChatApp {
             <li class="user-item ${this.currentRecipient?._id === user._id ? 'active' : ''}" data-user-id="${user._id}">
                 <span class="status-indicator ${user.statut === 1 ? 'online' : 'offline'}"></span>
                 <span class="username">${user.username}</span>
+                ${this.unreadMessages.get(user._id) ? 
+                    `<span class="unread-badge">${this.unreadMessages.get(user._id)}</span>` : 
+                    ''}
             </li>
         `).join('');
 
@@ -253,8 +330,32 @@ class ChatApp {
         this.currentRecipient = { _id: userId, username, statut: isOnline ? 1 : 0 };
         this.updateRecipientInfo();
 
-        // Charger les messages de la conversation
+        // Sauvegarder la conversation active
+        localStorage.setItem('lastActiveChat', userId);
+
+        // Marquer les messages comme lus
+        await this.markMessagesAsRead(userId);
+        
+        // Réinitialiser le compteur de messages non lus
+        this.unreadMessages.delete(userId);
+        
+        // Charger la conversation
         await this.loadConversation(userId);
+    }
+
+    // Nouvelle méthode pour marquer les messages comme lus
+    async markMessagesAsRead(senderId) {
+        try {
+            await fetch(`/api/messages/${senderId}/read`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include'
+            });
+        } catch (err) {
+            console.error('Erreur lors du marquage des messages comme lus:', err);
+        }
     }
 
     // Nouvelle méthode pour mettre à jour l'affichage du destinataire
@@ -272,6 +373,8 @@ class ChatApp {
 
     // Nouvelle méthode pour charger les messages d'une conversation
     async loadConversation(recipientId) {
+        if (!recipientId) return;
+
         try {
             const response = await fetch(`/api/messages/${recipientId}`, {
                 method: 'GET',
@@ -284,23 +387,37 @@ class ChatApp {
             if (response.ok) {
                 const messages = await response.json();
                 this.messageContainer.innerHTML = ''; // Vider le conteneur
+
+                // Trier les messages par date
+                messages.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+
                 messages.forEach(message => {
                     const isOwnMessage = message.senderId === this.currentUserId;
+                    const senderName = isOwnMessage ? this.currentUserName : this.currentRecipient.username;
+
                     if (message.type === 'text') {
                         this.addMessageToUI(isOwnMessage, {
                             message: message.content,
-                            name: isOwnMessage ? this.nameInput.value : this.currentRecipient.username,
-                            dateTime: message.timestamp
+                            name: senderName,
+                            dateTime: message.timestamp,
+                            isRead: message.isRead
                         });
                     } else if (message.type === 'audio') {
                         this.addAudioMessageToUI(isOwnMessage, {
                             audio: message.content,
-                            name: isOwnMessage ? this.nameInput.value : this.currentRecipient.username,
-                            dateTime: message.timestamp
+                            name: senderName,
+                            dateTime: message.timestamp,
+                            isRead: message.isRead
                         });
                     }
                 });
+                
                 this.scrollToBottom();
+
+                // Marquer les messages comme lus si nécessaire
+                if (this.currentRecipient) {
+                    await this.markMessagesAsRead(this.currentRecipient._id);
+                }
             }
         } catch (err) {
             console.error('Erreur lors du chargement des messages:', err);
