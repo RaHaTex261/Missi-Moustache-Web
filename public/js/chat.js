@@ -4,6 +4,8 @@ class ChatApp {
         // Connexion au serveur WebSocket
         this.socket = io();
         this.currentUserId = null;
+        this.currentRecipient = null;
+        this.currentUserName = '';
 
         // Initialisation des variables pour l'enregistrement audio
         this.audioChunks = [];
@@ -26,6 +28,11 @@ class ChatApp {
         // Initialisation des éléments du DOM
         this.initializeElements();
 
+        // Créer un input caché pour stocker le nom
+        this.nameInput = document.createElement('input');
+        this.nameInput.type = 'hidden';
+        document.body.appendChild(this.nameInput);
+
         // Ajout des écouteurs d'événements
         this.initializeEventListeners();
 
@@ -47,7 +54,6 @@ class ChatApp {
 
     // Sélection des éléments du DOM
     initializeElements() {
-        this.clientsTotal = document.getElementById("client-total");
         this.messageContainer = document.getElementById("message-container");
         this.nameInput = document.getElementById("name-input");
         this.messageForm = document.getElementById("message-form");
@@ -55,6 +61,8 @@ class ChatApp {
         this.micButton = document.getElementById("mic-button");
         this.statusIndicator = document.getElementById('status-indicator');
         this.usersList = document.getElementById('users-list');
+        this.recipientInfo = document.getElementById('recipient-info');
+        this.currentUserNameElement = document.getElementById('current-user-name');
     }
 
     // Ajout des écouteurs d'événements pour les interactions utilisateur
@@ -100,9 +108,6 @@ class ChatApp {
         // Gestion du feedback de saisie
         this.socket.on("feedback", (data) => this.handleFeedback(data));
 
-        // Mise à jour du nombre total de clients connectés
-        this.socket.on("clients-total", (count) => this.updateClientCount(count));
-
         // Nouveau gestionnaire pour les mises à jour de la liste des utilisateurs
         this.socket.on('users_update', (users) => {
             this.updateUsersList(users);
@@ -111,6 +116,30 @@ class ChatApp {
         // Gestion du keep-alive
         this.socket.on('keep_alive', () => {
             this.socket.emit('pong');
+        });
+
+        // Écouter les messages privés
+        this.socket.on("private-message", (data) => {
+            if (data.senderId === this.currentRecipient?._id) {
+                this.handleIncomingMessage({
+                    message: data.content,
+                    name: this.currentRecipient.username,
+                    dateTime: data.dateTime,
+                    socketId: data.socketId
+                });
+            }
+        });
+
+        // Écouter les messages audio privés
+        this.socket.on("private-audio-message", (data) => {
+            if (data.senderId === this.currentRecipient?._id) {
+                this.handleIncomingAudio({
+                    audio: data.content,
+                    name: this.currentRecipient.username,
+                    dateTime: data.dateTime,
+                    socketId: data.socketId
+                });
+            }
         });
     }
 
@@ -155,7 +184,9 @@ class ChatApp {
                 const userData = await response.json();
                 // Mettre à jour le champ avec le nom d'utilisateur
                 this.nameInput.value = userData.username;
+                this.currentUserName = userData.username;
                 this.currentUserId = userData.id;
+                this.currentUserNameElement.textContent = userData.username;
                 // Mise à jour de l'indicateur de statut
                 this.updateStatusIndicator(userData.statut);
 
@@ -193,15 +224,87 @@ class ChatApp {
 
     // Nouvelle méthode pour mettre à jour la liste des utilisateurs dans l'interface
     updateUsersList(users) {
-        // Filtrer l'utilisateur actuel de la liste
         const otherUsers = users.filter(user => user._id !== this.currentUserId);
 
         this.usersList.innerHTML = otherUsers.map(user => `
-            <li class="user-item">
+            <li class="user-item ${this.currentRecipient?._id === user._id ? 'active' : ''}" data-user-id="${user._id}">
                 <span class="status-indicator ${user.statut === 1 ? 'online' : 'offline'}"></span>
                 <span class="username">${user.username}</span>
             </li>
         `).join('');
+
+        // Ajouter les écouteurs d'événements pour chaque utilisateur
+        this.usersList.querySelectorAll('.user-item').forEach(item => {
+            item.addEventListener('click', () => this.handleUserSelect(item));
+        });
+    }
+
+    // Nouvelle méthode pour gérer la sélection d'un utilisateur
+    async handleUserSelect(userItem) {
+        const userId = userItem.dataset.userId;
+        const username = userItem.querySelector('.username').textContent;
+        const isOnline = userItem.querySelector('.status-indicator').classList.contains('online');
+
+        // Mettre à jour l'interface
+        document.querySelectorAll('.user-item').forEach(item => item.classList.remove('active'));
+        userItem.classList.add('active');
+
+        // Mettre à jour les informations du destinataire
+        this.currentRecipient = { _id: userId, username, statut: isOnline ? 1 : 0 };
+        this.updateRecipientInfo();
+
+        // Charger les messages de la conversation
+        await this.loadConversation(userId);
+    }
+
+    // Nouvelle méthode pour mettre à jour l'affichage du destinataire
+    updateRecipientInfo() {
+        if (this.currentRecipient) {
+            this.recipientInfo.innerHTML = `
+                <span class="username">Discussion avec ${this.currentRecipient.username}</span>
+                <span class="status-indicator ${this.currentRecipient.statut === 1 ? 'online' : 'offline'}"></span>
+            `;
+            this.recipientInfo.classList.remove('hidden');
+        } else {
+            this.recipientInfo.classList.add('hidden');
+        }
+    }
+
+    // Nouvelle méthode pour charger les messages d'une conversation
+    async loadConversation(recipientId) {
+        try {
+            const response = await fetch(`/api/messages/${recipientId}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include'
+            });
+
+            if (response.ok) {
+                const messages = await response.json();
+                this.messageContainer.innerHTML = ''; // Vider le conteneur
+                messages.forEach(message => {
+                    const isOwnMessage = message.senderId === this.currentUserId;
+                    if (message.type === 'text') {
+                        this.addMessageToUI(isOwnMessage, {
+                            message: message.content,
+                            name: isOwnMessage ? this.nameInput.value : this.currentRecipient.username,
+                            dateTime: message.timestamp
+                        });
+                    } else if (message.type === 'audio') {
+                        this.addAudioMessageToUI(isOwnMessage, {
+                            audio: message.content,
+                            name: isOwnMessage ? this.nameInput.value : this.currentRecipient.username,
+                            dateTime: message.timestamp
+                        });
+                    }
+                });
+                this.scrollToBottom();
+            }
+        } catch (err) {
+            console.error('Erreur lors du chargement des messages:', err);
+        }
     }
 
     // Nouvelle méthode pour mettre à jour l'indicateur de statut
@@ -216,27 +319,50 @@ class ChatApp {
 
     // Fonction d'envoi de message texte
     sendTextMessage() {
+        if (!this.currentRecipient) {
+            alert('Veuillez sélectionner un destinataire');
+            return;
+        }
+
         const data = {
-            name: this.nameInput.value,
-            message: this.messageInput.value,
+            receiverId: this.currentRecipient._id,
+            content: this.messageInput.value,
+            type: 'text',
             dateTime: new Date(),
-            socketId: this.socket.id // Ajout de l'ID du socket
+            socketId: this.socket.id
         };
-        this.socket.emit("message", data);
-        this.addMessageToUI(true, data);
+
+        this.socket.emit("private-message", data);
+        this.addMessageToUI(true, {
+            message: data.content,
+            name: this.nameInput.value,
+            dateTime: data.dateTime
+        });
         this.messageInput.value = "";
     }
 
     // Fonction d'envoi de message audio
     sendAudioMessage() {
+        if (!this.currentRecipient) {
+            alert('Veuillez sélectionner un destinataire');
+            return;
+        }
+
         const data = {
-            name: this.nameInput.value,
-            audio: this.recordedAudioBase64,
+            receiverId: this.currentRecipient._id,
+            content: this.recordedAudioBase64, // Utiliser content au lieu de audio
+            type: 'audio',
             dateTime: new Date(),
-            socketId: this.socket.id // Ajout de l'ID du socket
+            socketId: this.socket.id
         };
-        this.socket.emit("audio-message", data);
-        this.addAudioMessageToUI(true, data);
+
+        this.socket.emit("private-audio-message", data);
+        this.addAudioMessageToUI(true, {
+            audio: data.content,
+            name: this.nameInput.value,
+            dateTime: data.dateTime
+        });
+
         this.recordedAudioBase64 = null;
         this.messageInput.value = "";
         this.messageInput.disabled = false;
@@ -407,11 +533,6 @@ class ChatApp {
     // Fonction pour faire défiler automatiquement vers le bas
     scrollToBottom() {
         this.messageContainer.scrollTo(0, this.messageContainer.scrollHeight);
-    }
-
-    // Mise à jour du nombre total de clients connectés
-    updateClientCount(count) {
-        this.clientsTotal.innerText = `Clients connectés: ${count}`;
     }
 }
 

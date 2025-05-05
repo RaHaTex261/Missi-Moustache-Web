@@ -5,7 +5,6 @@ const User = require('./models/User');
 class SocketService {
     constructor(server) {
         this.io = socketIo(server);
-        this.socketsConnected = new Set();
         this.connectedUsers = new Map();
         this.io.on('connection', this.handleConnection.bind(this));
 
@@ -14,10 +13,6 @@ class SocketService {
     }
 
     handleConnection(socket) {
-        console.log('Socket connecté', socket.id);
-        this.socketsConnected.add(socket.id);
-        this.io.emit('clients-total', this.socketsConnected.size);
-
         socket.on('user_connected', async (userId) => {
             if (!userId) return;
             
@@ -50,8 +45,6 @@ class SocketService {
 
         socket.on('disconnect', async () => {
             console.log('Socket déconnecté', socket.id);
-            this.socketsConnected.delete(socket.id);
-            this.io.emit('clients-total', this.socketsConnected.size);
 
             if (socket.userId) {
                 const userConnections = this.connectedUsers.get(socket.userId);
@@ -70,6 +63,15 @@ class SocketService {
             }
         });
 
+        // Gestion des messages privés
+        socket.on('private-message', async (data) => {
+            await messagesController.handleSocketMessage(socket, data);
+        });
+
+        socket.on('private-audio-message', async (data) => {
+            await messagesController.handleSocketAudioMessage(socket, data);
+        });
+
         socket.on('message', async (data) => {
             await messagesController.handleSocketMessage(socket, data);
         });
@@ -79,7 +81,13 @@ class SocketService {
         });
 
         socket.on('feedback', (data) => {
-            socket.broadcast.emit('feedback', data);
+            if (data.receiverId) {
+                // Envoyer le feedback uniquement au destinataire
+                socket.broadcast.to(data.receiverId).emit('feedback', data);
+            } else {
+                // Comportement par défaut : broadcast à tous
+                socket.broadcast.emit('feedback', data);
+            }
         });
     }
 

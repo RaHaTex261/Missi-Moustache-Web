@@ -11,6 +11,7 @@
     --button-hover-color: #009b7d;
     --status-online: #2ecc71;
     --status-offline: #e74c3c;
+    --selected-user-bg: #e8f5ff;
 }
 
 /* Styles de base et réinitialisation */
@@ -80,11 +81,17 @@ html, body {
     padding: 10px;
     margin-bottom: 5px;
     border-radius: 5px;
-    transition: background-color 0.2s;
+    transition: all 0.2s ease;
+    cursor: pointer;
 }
 
 .user-item:hover {
-    background-color: #f5f5f5;
+    background-color: var(--selected-user-bg);
+}
+
+.user-item.active {
+    background-color: var(--selected-user-bg);
+    border-left: 3px solid var(--accent-color);
 }
 
 .user-item .status-indicator {
@@ -109,6 +116,50 @@ html, body {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* En-tête du chat */
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 10px;
+}
+
+.connection-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.connection-status .status-text {
+    font-weight: 500;
+}
+
+.recipient-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.recipient-info .username {
+    font-size: 18px;
+}
+
+.recipient-info .status-indicator {
+    margin: 0;
+}
+
+.recipient-info.hidden {
+    display: none;
 }
 
 /* Zone de saisie du nom d'utilisateur */
@@ -439,4 +490,21 @@ html, body {
 .status-indicator.offline {
     background-color: var(--status-offline);
     box-shadow: 0 0 5px var(--status-offline);
+}
+
+/* Styles pour le nom de l'utilisateur connecté */
+.current-user-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.current-user-name {
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.status-text {
+    color: var(--secondary-color);
+    font-size: 14px;
 }

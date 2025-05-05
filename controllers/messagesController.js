@@ -15,6 +15,24 @@ const messagesController = {
         }
     },
 
+    // Récupérer les messages d'une conversation privée
+    async getConversation(req, res) {
+        try {
+            const { recipientId } = req.params;
+            const messages = await Message.find({
+                $or: [
+                    { senderId: req.user.id, receiverId: recipientId },
+                    { senderId: recipientId, receiverId: req.user.id }
+                ]
+            }).sort({ timestamp: 1 });
+            
+            res.json(messages);
+        } catch (err) {
+            console.error('Erreur lors de la récupération des messages:', err);
+            res.status(500).json({ message: 'Erreur serveur' });
+        }
+    },
+
     // Envoyer un nouveau message
     async sendMessage(req, res) {
         try {
@@ -57,14 +75,14 @@ const messagesController = {
         }
     },
 
-    // Gérer les messages en temps réel via WebSocket
+    // Gérer les messages privés en temps réel via WebSocket
     async handleSocketMessage(socket, data) {
         try {
-            // Créer un nouveau message avec les IDs MongoDB
+            // Créer un nouveau message avec l'ID de l'utilisateur connecté
             const message = new Message({
-                senderId: new mongoose.Types.ObjectId(),
-                receiverId: new mongoose.Types.ObjectId(),
-                content: data.message,
+                senderId: socket.userId,
+                receiverId: data.receiverId,
+                content: data.content,
                 type: 'text',
                 timestamp: new Date()
             });
@@ -72,46 +90,36 @@ const messagesController = {
             // Sauvegarder le message dans MongoDB
             await message.save();
 
-            // Émettre le message aux autres utilisateurs
-            socket.broadcast.emit('chat-message', {
-                id: message._id,
-                message: data.message, // Ajout du contenu du message
-                name: data.name,
-                dateTime: message.timestamp,
-                socketId: data.socketId
+            // Émettre le message au destinataire
+            socket.broadcast.emit('private-message', {
+                senderId: socket.userId,
+                content: data.content,
+                dateTime: message.timestamp
             });
 
         } catch (err) {
             console.error('Erreur lors de l\'enregistrement du message:', err);
+            socket.emit('error', { message: 'Erreur lors de l\'envoi du message' });
         }
     },
 
-    // Gérer les messages audio en temps réel
+    // Gérer les messages audio privés en temps réel
     async handleSocketAudioMessage(socket, data) {
         try {
-            // Créer un nouveau message audio avec les IDs MongoDB
             const message = new Message({
-                senderId: data.senderId || new mongoose.Types.ObjectId(),
-                receiverId: data.receiverId || new mongoose.Types.ObjectId(),
-                content: data.audio,
+                senderId: socket.userId,
+                receiverId: data.receiverId,
+                content: data.content || data.audio, // Utiliser content ou audio
                 type: 'audio',
                 timestamp: new Date()
             });
 
-            // Sauvegarder le message dans MongoDB
             await message.save();
 
-            // Émettre le message audio aux autres utilisateurs
-            socket.broadcast.emit('audio-message', {
-                id: message._id,
-                audio: data.audio, // Envoi des données audio brutes
+            socket.broadcast.emit('private-audio-message', {
+                senderId: socket.userId,
                 content: message.content,
-                senderId: message.senderId,
-                receiverId: message.receiverId,
-                name: data.name,
-                timestamp: message.timestamp,
-                type: 'audio',
-                socketId: data.socketId
+                dateTime: message.timestamp
             });
 
         } catch (err) {

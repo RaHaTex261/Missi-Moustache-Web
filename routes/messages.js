@@ -4,6 +4,7 @@ const messagesController = require('../controllers/messagesController');
 const authMiddleware = require('../middlewares/authMiddleware');
 
 router.get('/', authMiddleware, messagesController.getAllMessages);
+router.get('/:recipientId', authMiddleware, messagesController.getConversation);
 router.post('/', authMiddleware, messagesController.sendMessage);
 router.delete('/:id', authMiddleware, messagesController.deleteMessage);
 
