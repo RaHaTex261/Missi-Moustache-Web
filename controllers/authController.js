@@ -6,14 +6,26 @@ const authController = {
     // Inscription d'un nouvel utilisateur
     async register(req, res) {
         try {
-            const { name, email, password } = req.body;
-            let user = await User.findOne({ email });
+            const { nom_complet, username, email, password } = req.body;
+            
+            // Vérifier si l'utilisateur existe déjà (email ou username)
+            let userExists = await User.findOne({ 
+                $or: [
+                    { email },
+                    { username }
+                ]
+            });
 
-            if (user) {
-                return res.status(400).json({ message: 'Cet utilisateur existe déjà' });
+            if (userExists) {
+                return res.status(400).json({ 
+                    message: userExists.email === email 
+                        ? 'Cet email est déjà utilisé' 
+                        : 'Ce nom d\'utilisateur est déjà pris'
+                });
             }
 
-            user = new User({ name, email, password });
+            // Créer le nouvel utilisateur
+            const user = new User({ nom_complet, username, email, password });
             await user.save();
 
             const token = jwt.sign(
@@ -22,8 +34,15 @@ const authController = {
                 { expiresIn: '1h' }
             );
 
-            res.json({ token });
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production',
+                maxAge: 3600000 // 1 heure
+            });
+
+            res.json({ success: true });
         } catch (err) {
+            console.error('Erreur lors de l\'inscription:', err);
             res.status(500).json({ message: 'Erreur serveur' });
         }
     },
@@ -49,10 +68,22 @@ const authController = {
                 { expiresIn: '1h' }
             );
 
-            res.json({ token });
+            res.cookie('token', token, {
+                httpOnly: true,
+                secure: process.env.NODE_ENV === 'production',
+                maxAge: 3600000 // 1 heure
+            });
+
+            res.json({ success: true });
         } catch (err) {
             res.status(500).json({ message: 'Erreur serveur' });
         }
+    },
+
+    // Déconnexion
+    logout(req, res) {
+        res.clearCookie('token');
+        res.redirect('/login');
     },
 
     // Récupération des informations de l'utilisateur

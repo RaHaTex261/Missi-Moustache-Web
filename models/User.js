@@ -2,9 +2,14 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 
 const UserSchema = new mongoose.Schema({
-    name: {
+    nom_complet: {
         type: String,
         required: true
+    },
+    username: {
+        type: String,
+        required: true,
+        unique: true
     },
     email: {
         type: String,
@@ -19,7 +24,7 @@ const UserSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     }
-});
+}, { collection: 'utilisateur' }); // Spécifie explicitement le nom de la collection
 
 // Middleware pour hasher le mot de passe avant la sauvegarde
 UserSchema.pre('save', async function(next) {

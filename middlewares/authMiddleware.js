@@ -1,10 +1,11 @@
 const jwt = require('jsonwebtoken');
 
 const authMiddleware = (req, res, next) => {
-    const token = req.header('x-auth-token');
+    // Vérifier le token dans le cookie
+    const token = req.cookies?.token || req.header('x-auth-token');
 
     if (!token) {
-        return res.status(401).json({ message: 'Accès refusé, token manquant' });
+        return res.redirect('/login');
     }
 
     try {
@@ -12,7 +13,8 @@ const authMiddleware = (req, res, next) => {
         req.user = decoded.user;
         next();
     } catch (err) {
-        res.status(401).json({ message: 'Token invalide' });
+        res.clearCookie('token');
+        res.redirect('/login');
     }
 };
 
