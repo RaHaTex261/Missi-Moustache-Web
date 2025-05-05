@@ -1,51 +1,86 @@
-# Chat app 💬 using websockets (Nodejs, Express & Socket.io)
+# Ndao Iresaka - Application de Chat en Temps Réel
 
-We are going to develop a chat application using Express, Websockets. Tough you can use plain websockets but we would be using a library called Socket.io - which is wrapper around Websockets, its super easy to use and provies a fallback to xhr requests until the websocket connection is established.
+Application de chat en temps réel avec support des messages vocaux, développée avec Node.js, Express, Socket.IO et MongoDB.
 
-The frontend-ui is based on Flexbox, no external UI libraries are used, so you can modify it as per your liking.
+## Fonctionnalités
 
----
+- Chat en temps réel
+- Messages vocaux
+- Système d'authentification JWT
+- Notifications sonores
+- Indicateurs de lecture
+- Statut en ligne/hors ligne
+- Interface responsive
 
-## What is Websocket ?
+## Prérequis
 
-WebSockets are an alternative to HTTP communication in Web Application, they offer full-duplex communication, that is, it is, bi-directional and that means the data can flow in both ways, so it can flow from client to the server and also from server to the client.
+- Node.js latest
+- MongoDB latest
+- npm 
 
----
+## Installation
 
-## To start setting up the project
-
-Step 1: Clone the repo
-
+1. Cloner le dépôt :
 ```bash
-git clone https://github.com/trulymittal/chat-socket.io.git
+git clone [url-du-repo]
+cd ndao-iresaka
 ```
 
-Step 2: cd into the cloned repo and run:
-
+2. Installer les dépendances :
 ```bash
 npm install
 ```
 
-Step 3: Start the chat app (development mode)
+3. Créer un fichier `.env` à la racine du projet :
+```env
+PORT=3000
+MONGODB_URI=mongodb://localhost:27017/ndao-iresaka
+JWT_SECRET=votre_clé_secrète_jwt
+```
 
+## Lancement
+
+### Mode développement
 ```bash
 npm run dev
 ```
+L'application sera accessible sur `http://localhost:3000` avec rechargement automatique.
 
-Step 4: Start the chat app
-
+### Mode production
 ```bash
 npm start
 ```
+L'application sera accessible sur `http://localhost:3000`.
 
-## Author
+## Structure du Projet
 
-- [**Truly Mittal**](https://trulymittal.com)
+```
+├── app.js              # Point d'entrée de l'application
+├── socket.js           # Configuration Socket.IO
+├── config/            
+│   ├── db.js          # Configuration MongoDB
+│   └── tenor.js       # Configuration API Tenor
+├── controllers/        # Contrôleurs
+├── middlewares/       # Middlewares Express
+├── models/            # Modèles Mongoose
+├── public/            # Fichiers statiques
+├── routes/            # Routes Express
+├── services/          # Services
+└── views/             # Templates EJS
+```
 
-## Contribute
+## Technologies Utilisées
 
-You can fork this repo and send me a PR.
+- **Backend** : Node.js, Express
+- **Base de données** : MongoDB avec Mongoose
+- **Temps réel** : Socket.IO
+- **Template Engine** : EJS
+- **Authentification** : JWT avec bcrypt
+- **Frontend** : JavaScript vanilla, CSS3
 
-## License
+## Scripts disponibles
 
-This project is licensed under the MIT License.
+- `npm run dev` : Lance l'application en mode développement avec nodemon
+- `npm start` : Lance l'application en mode production
+- `npm run lint` : Vérifie le code avec ESLint
+- `npm test` : Lance les tests avec Jest
