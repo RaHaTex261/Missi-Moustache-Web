@@ -92,16 +92,23 @@ const authController = {
     // Déconnexion
     async logout(req, res) {
         try {
-            if (req.user && req.user.id) {
-                // Mettre à jour le statut hors ligne
-                await User.findByIdAndUpdate(req.user.id, { statut: 0 });
+            const token = req.cookies?.token;
+            
+            if (token) {
+                try {
+                    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'votre_secret_jwt');
+                    // Ne pas mettre à jour le statut ici, car il est géré par Socket.IO
+                    // La déconnexion du socket se produira naturellement
+                } catch (err) {
+                    console.error('Erreur lors du décodage du token:', err);
+                }
             }
+            
             res.clearCookie('token');
-            res.redirect('/login');
+            res.json({ success: true });
         } catch (err) {
             console.error('Erreur lors de la déconnexion:', err);
-            res.clearCookie('token');
-            res.redirect('/login');
+            res.status(500).json({ message: 'Erreur serveur' });
         }
     },
 

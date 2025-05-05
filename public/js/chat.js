@@ -3,6 +3,7 @@ class ChatApp {
     constructor() {
         // Connexion au serveur WebSocket
         this.socket = io();
+        this.currentUserId = null;
 
         // Initialisation des variables pour l'enregistrement audio
         this.audioChunks = [];
@@ -31,8 +32,17 @@ class ChatApp {
         // Configuration des écouteurs de socket
         this.initializeSocketListeners();
 
+        // Initialiser le système de keep-alive
+        this.initializeKeepAlive();
+
         // Charger les informations de l'utilisateur connecté
         this.loadUserInfo();
+
+        // Charger les utilisateurs initialement
+        this.loadUsers();
+
+        // Rafraîchir la liste des utilisateurs toutes les 10 secondes
+        setInterval(() => this.loadUsers(), 10000);
     }
 
     // Sélection des éléments du DOM
@@ -44,6 +54,7 @@ class ChatApp {
         this.messageInput = document.getElementById("message-input");
         this.micButton = document.getElementById("mic-button");
         this.statusIndicator = document.getElementById('status-indicator');
+        this.usersList = document.getElementById('users-list');
     }
 
     // Ajout des écouteurs d'événements pour les interactions utilisateur
@@ -91,6 +102,32 @@ class ChatApp {
 
         // Mise à jour du nombre total de clients connectés
         this.socket.on("clients-total", (count) => this.updateClientCount(count));
+
+        // Nouveau gestionnaire pour les mises à jour de la liste des utilisateurs
+        this.socket.on('users_update', (users) => {
+            this.updateUsersList(users);
+        });
+
+        // Gestion du keep-alive
+        this.socket.on('keep_alive', () => {
+            this.socket.emit('pong');
+        });
+    }
+
+    // Initialiser le système de keep-alive
+    initializeKeepAlive() {
+        // Envoyer un pong toutes les 25 secondes pour maintenir la connexion
+        setInterval(() => {
+            if (this.socket.connected) {
+                this.socket.emit('pong');
+            }
+        }, 25000);
+
+        // Gérer la reconnexion
+        this.socket.on('reconnect', async () => {
+            // Recharger les informations utilisateur lors de la reconnexion
+            await this.loadUserInfo();
+        });
     }
 
     // Gestion de la soumission du formulaire de message
@@ -118,8 +155,12 @@ class ChatApp {
                 const userData = await response.json();
                 // Mettre à jour le champ avec le nom d'utilisateur
                 this.nameInput.value = userData.username;
+                this.currentUserId = userData.id;
                 // Mise à jour de l'indicateur de statut
                 this.updateStatusIndicator(userData.statut);
+
+                // Émettre l'événement de connexion utilisateur
+                this.socket.emit('user_connected', userData.id);
             } else {
                 console.error('Erreur lors de la récupération des informations utilisateur');
                 window.location.href = '/login'; // Rediriger vers la page de connexion si non authentifié
@@ -128,6 +169,39 @@ class ChatApp {
             console.error('Erreur:', err);
             window.location.href = '/login';
         }
+    }
+
+    // Nouvelle méthode pour charger la liste des utilisateurs
+    async loadUsers() {
+        try {
+            const response = await fetch('/api/users', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include'
+            });
+
+            if (response.ok) {
+                const users = await response.json();
+                this.updateUsersList(users);
+            }
+        } catch (err) {
+            console.error('Erreur lors du chargement des utilisateurs:', err);
+        }
+    }
+
+    // Nouvelle méthode pour mettre à jour la liste des utilisateurs dans l'interface
+    updateUsersList(users) {
+        // Filtrer l'utilisateur actuel de la liste
+        const otherUsers = users.filter(user => user._id !== this.currentUserId);
+
+        this.usersList.innerHTML = otherUsers.map(user => `
+            <li class="user-item">
+                <span class="status-indicator ${user.statut === 1 ? 'online' : 'offline'}"></span>
+                <span class="username">${user.username}</span>
+            </li>
+        `).join('');
     }
 
     // Nouvelle méthode pour mettre à jour l'indicateur de statut

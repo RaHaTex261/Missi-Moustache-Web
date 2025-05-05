@@ -4,10 +4,12 @@ const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const SocketService = require('./socket');
 const authMiddleware = require('./middlewares/authMiddleware');
+const redirectIfAuthenticated = require('./middlewares/redirectIfAuthenticated');
 
 // Routes
 const authRoutes = require('./routes/auth');
 const messagesRoutes = require('./routes/messages');
+const usersRoutes = require('./routes/users');
 
 // Initialisation de l'application
 const app = express();
@@ -30,14 +32,14 @@ app.set('views', path.join(__dirname, 'views'));
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/messages', messagesRoutes);
+app.use('/api/users', usersRoutes);
 
-// Route pour la page d'inscription
-app.get('/register', (req, res) => {
+// Routes publiques avec vérification de l'authentification
+app.get('/register', redirectIfAuthenticated, (req, res) => {
     res.render('register');
 });
 
-// Route pour la page de login
-app.get('/login', (req, res) => {
+app.get('/login', redirectIfAuthenticated, (req, res) => {
     res.render('login');
 });
 
