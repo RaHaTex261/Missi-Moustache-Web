@@ -43,6 +43,7 @@ class ChatApp {
         this.messageForm = document.getElementById("message-form");
         this.messageInput = document.getElementById("message-input");
         this.micButton = document.getElementById("mic-button");
+        this.statusIndicator = document.getElementById('status-indicator');
     }
 
     // Ajout des écouteurs d'événements pour les interactions utilisateur
@@ -117,6 +118,8 @@ class ChatApp {
                 const userData = await response.json();
                 // Mettre à jour le champ avec le nom d'utilisateur
                 this.nameInput.value = userData.username;
+                // Mise à jour de l'indicateur de statut
+                this.updateStatusIndicator(userData.statut);
             } else {
                 console.error('Erreur lors de la récupération des informations utilisateur');
                 window.location.href = '/login'; // Rediriger vers la page de connexion si non authentifié
@@ -124,6 +127,16 @@ class ChatApp {
         } catch (err) {
             console.error('Erreur:', err);
             window.location.href = '/login';
+        }
+    }
+
+    // Nouvelle méthode pour mettre à jour l'indicateur de statut
+    updateStatusIndicator(status) {
+        this.statusIndicator.className = 'status-indicator';
+        if (status === 1) {
+            this.statusIndicator.classList.add('online');
+        } else {
+            this.statusIndicator.classList.add('offline');
         }
     }
 

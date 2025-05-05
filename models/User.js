@@ -20,6 +20,10 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    statut: {
+        type: Number,
+        default: 0 // 0 = hors ligne, 1 = connecté
+    },
     createdAt: {
         type: Date,
         default: Date.now

@@ -62,11 +62,14 @@ const authController = {
                 return res.status(400).json({ message: 'Identifiants invalides' });
             }
 
-            // S'assurer que la structure du token est identique à celle de l'inscription
+            // Mettre à jour le statut en ligne
+            user.statut = 1;
+            await user.save();
+
             const token = jwt.sign(
                 { 
                     user: { 
-                        id: user._id.toString() // Conversion explicite en string
+                        id: user._id.toString()
                     } 
                 },
                 process.env.JWT_SECRET || 'votre_secret_jwt',
@@ -87,9 +90,19 @@ const authController = {
     },
 
     // Déconnexion
-    logout(req, res) {
-        res.clearCookie('token');
-        res.redirect('/login');
+    async logout(req, res) {
+        try {
+            if (req.user && req.user.id) {
+                // Mettre à jour le statut hors ligne
+                await User.findByIdAndUpdate(req.user.id, { statut: 0 });
+            }
+            res.clearCookie('token');
+            res.redirect('/login');
+        } catch (err) {
+            console.error('Erreur lors de la déconnexion:', err);
+            res.clearCookie('token');
+            res.redirect('/login');
+        }
     },
 
     // Récupération des informations de l'utilisateur
@@ -103,7 +116,8 @@ const authController = {
                 id: user._id,
                 nom_complet: user.nom_complet,
                 username: user.username,
-                email: user.email
+                email: user.email,
+                statut: user.statut
             });
         } catch (err) {
             console.error('Erreur lors de la récupération de l\'utilisateur:', err);

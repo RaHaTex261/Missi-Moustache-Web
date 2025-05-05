@@ -9,6 +9,8 @@
     --message-received-color: #90EE90; /* Vert clair pour les messages reçus */
     --input-border-color: #ddd;
     --button-hover-color: #009b7d;
+    --status-online: #2ecc71;
+    --status-offline: #e74c3c;
 }
 
 /* Styles de base et réinitialisation */
@@ -361,4 +363,23 @@ html, body {
     0% { opacity: 0.3; }
     50% { opacity: 1; }
     100% { opacity: 0.3; }
+}
+
+/* Styles pour l'indicateur de statut */
+.status-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.status-indicator.online {
+    background-color: var(--status-online);
+    box-shadow: 0 0 5px var(--status-online);
+}
+
+.status-indicator.offline {
+    background-color: var(--status-offline);
+    box-shadow: 0 0 5px var(--status-offline);
 }
