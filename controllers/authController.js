@@ -62,8 +62,13 @@ const authController = {
                 return res.status(400).json({ message: 'Identifiants invalides' });
             }
 
+            // S'assurer que la structure du token est identique à celle de l'inscription
             const token = jwt.sign(
-                { user: { id: user.id } },
+                { 
+                    user: { 
+                        id: user._id.toString() // Conversion explicite en string
+                    } 
+                },
                 process.env.JWT_SECRET || 'votre_secret_jwt',
                 { expiresIn: '1h' }
             );
@@ -76,6 +81,7 @@ const authController = {
 
             res.json({ success: true });
         } catch (err) {
+            console.error('Erreur lors de la connexion:', err);
             res.status(500).json({ message: 'Erreur serveur' });
         }
     },
@@ -90,8 +96,17 @@ const authController = {
     async getUser(req, res) {
         try {
             const user = await User.findById(req.user.id).select('-password');
-            res.json(user);
+            if (!user) {
+                return res.status(404).json({ message: 'Utilisateur non trouvé' });
+            }
+            res.json({
+                id: user._id,
+                nom_complet: user.nom_complet,
+                username: user.username,
+                email: user.email
+            });
         } catch (err) {
+            console.error('Erreur lors de la récupération de l\'utilisateur:', err);
             res.status(500).json({ message: 'Erreur serveur' });
         }
     }

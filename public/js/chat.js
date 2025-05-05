@@ -30,6 +30,9 @@ class ChatApp {
 
         // Configuration des écouteurs de socket
         this.initializeSocketListeners();
+
+        // Charger les informations de l'utilisateur connecté
+        this.loadUserInfo();
     }
 
     // Sélection des éléments du DOM
@@ -96,6 +99,31 @@ class ChatApp {
             this.sendTextMessage();
         } else if (this.recordedAudioBase64) {
             this.sendAudioMessage();
+        }
+    }
+
+    // Fonction pour charger les informations de l'utilisateur
+    async loadUserInfo() {
+        try {
+            const response = await fetch('/api/auth/user', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                credentials: 'include' // Pour inclure les cookies
+            });
+
+            if (response.ok) {
+                const userData = await response.json();
+                // Mettre à jour le champ avec le nom d'utilisateur
+                this.nameInput.value = userData.username;
+            } else {
+                console.error('Erreur lors de la récupération des informations utilisateur');
+                window.location.href = '/login'; // Rediriger vers la page de connexion si non authentifié
+            }
+        } catch (err) {
+            console.error('Erreur:', err);
+            window.location.href = '/login';
         }
     }
 
