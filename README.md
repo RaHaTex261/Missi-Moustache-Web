@@ -1,177 +1,99 @@
-# Ndao Iresaka - Application de Chat en Temps Réel
-
-Application de chat en temps réel avec support des messages vocaux, développée avec Node.js, Express, Socket.IO et MongoDB.
-
-## Fonctionnalités
-
-- Chat en temps réel
-- Messages vocaux
-- Système d'authentification JWT
-- Notifications sonores
-- Indicateurs de lecture
-- Statut en ligne/hors ligne
-- Interface responsive
-
-## Prérequis
-
-- Node.js latest
-- MongoDB latest
-- npm 
+# Ndao Iresaka
 
 ## Installation
-
-1. Cloner le dépôt :
 ```bash
 git clone [url-du-repo]
 cd ndao-iresaka
-```
-
-2. Installer les dépendances :
-```bash
 npm install
 ```
 
-3. Créer un fichier `.env` à la racine du projet :
-```env
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/ndao-iresaka
-JWT_SECRET=votre_clé_secrète_jwt
-```
-
 ## Lancement
-
-### Mode développement
 ```bash
-npm run dev
+npm run dev  # Mode développement
+npm start    # Mode production
 ```
-L'application sera accessible sur `http://localhost:3000` avec rechargement automatique.
-
-### Mode production
-```bash
-npm start
-```
-L'application sera accessible sur `http://localhost:3000`.
-
-## Structure du Projet
-
-```
-├── app.js              # Point d'entrée de l'application
-├── socket.js           # Configuration Socket.IO
-├── config/            
-│   ├── db.js          # Configuration MongoDB
-│   └── tenor.js       # Configuration API Tenor
-├── controllers/        # Contrôleurs
-├── middlewares/       # Middlewares Express
-├── models/            # Modèles Mongoose
-├── public/            # Fichiers statiques
-├── routes/            # Routes Express
-├── services/          # Services
-└── views/             # Templates EJS
-```
-
-## Technologies Utilisées
-
-- **Backend** : Node.js, Express
-- **Base de données** : MongoDB avec Mongoose
-- **Temps réel** : Socket.IO
-- **Template Engine** : EJS
-- **Authentification** : JWT avec bcrypt
-- **Frontend** : JavaScript vanilla, CSS3
-
-## Scripts disponibles
-
-- `npm run dev` : Lance l'application en mode développement avec nodemon
-- `npm start` : Lance l'application en mode production
-- `npm run lint` : Vérifie le code avec ESLint
-- `npm test` : Lance les tests avec Jest
 
 ## Endpoints API
 
-### Authentification (`/api/auth`)
+### Authentification
+- `POST /api/auth/register` - Inscription utilisateur
+- `POST /api/auth/login` - Connexion utilisateur
+- `POST /api/auth/logout` - Déconnexion
 
-#### Inscription
+### Messages
+- `GET /api/messages` - Récupérer les messages
+- `POST /api/messages` - Envoyer un message
+- `PUT /api/messages/:id/read` - Marquer comme lu
+
+## Exemple de test (Postman / Socket.IO Client)
+
+### Test avec Postman
 ```http
-POST /api/auth/register
-Content-Type: application/json
-
+# Inscription
+POST http://localhost:3000/api/auth/register
 {
-    "nom_complet": "John Doe",
-    "username": "johndoe",
-    "email": "john@example.com",
-    "password": "motdepasse123"
+    "username": "test",
+    "email": "test@example.com",
+    "password": "test123"
+}
+
+# Connexion
+POST http://localhost:3000/api/auth/login
+{
+    "email": "test@example.com",
+    "password": "test123"
 }
 ```
 
-#### Connexion
-```http
-POST /api/auth/login
-Content-Type: application/json
+### Test avec Socket.IO Client
+```javascript
+const socket = io('http://localhost:3000', {
+    auth: { token: 'votre_token_jwt' }
+});
 
-{
-    "email": "john@example.com",
-    "password": "motdepasse123"
-}
+socket.emit('send_message', {
+    receiverId: 'user_id',
+    content: 'Hello!',
+    type: 'text'
+});
 ```
 
-#### Déconnexion
-```http
-POST /api/auth/logout
-```
-
-#### Obtenir l'utilisateur courant
-```http
-GET /api/auth/user
-Authorization: Bearer JWT_TOKEN
-```
-
-### Messages (`/api/messages`)
-
-#### Récupérer tous les messages
-```http
-GET /api/messages
-Authorization: Bearer JWT_TOKEN
-```
-
-#### Récupérer une conversation
-```http
-GET /api/messages/:recipientId
-Authorization: Bearer JWT_TOKEN
-```
-
-#### Envoyer un message
-```http
-POST /api/messages
-Authorization: Bearer JWT_TOKEN
-Content-Type: application/json
-
-{
-    "receiverId": "id_destinataire",
-    "content": "Contenu du message",
-    "type": "text" // ou "audio" pour les messages vocaux
-}
-```
-
-#### Supprimer un message
-```http
-DELETE /api/messages/:id
-Authorization: Bearer JWT_TOKEN
-```
-
-#### Marquer les messages comme lus
-```http
-PUT /api/messages/:recipientId/read
-Authorization: Bearer JWT_TOKEN
-```
-
-### Utilisateurs (`/api/users`)
-
-#### Liste des utilisateurs
-```http
-GET /api/users
-Authorization: Bearer JWT_TOKEN
-```
-
-### Pour tester avec JEST
-````
+## Exemple de tests automatisés (Jest)
+```bash
+# Lancer tous les tests
 npm test
-````
+
+# Lancer un fichier de test spécifique
+npm test app.test.js
+```
+
+Exemple de test:
+```javascript
+describe('Auth API', () => {
+    test('should register new user', async () => {
+        const response = await request(app)
+            .post('/api/auth/register')
+            .send({
+                username: 'test',
+                email: 'test@example.com',
+                password: 'test123'
+            });
+        expect(response.status).toBe(201);
+    });
+});
+```
+
+## Démarche TDD appliquée dans le projet
+
+1. **Écriture des tests d'abord**
+   - Tests d'authentification
+   - Tests de messagerie
+   - Tests de connexion Socket.IO
+
+2. **Implémentation du code**
+   - Développement des fonctionnalités
+   - Validation des tests
+
+3. **Refactoring**
+   - Amélioration du code
+   - Maintien des tests
