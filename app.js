@@ -61,7 +61,13 @@ app.use((err, req, res, next) => {
     res.status(500).json({ message: 'Une erreur est survenue !' });
 });
 
-const PORT = process.env.PORT || 4000;
-server.listen(PORT, () => {
-    console.log(`💬 Serveur démarré sur le port ${PORT}`);
-});
+// Export du serveur pour les tests
+module.exports = { app, server };
+
+// Démarrage du serveur uniquement si ce n'est pas un test
+if (process.env.NODE_ENV !== 'test') {
+    const PORT = process.env.PORT || 4000;
+    server.listen(PORT, () => {
+        console.log(`Serveur démarré sur le port ${PORT}`);
+    });
+}

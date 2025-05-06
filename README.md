@@ -84,3 +84,94 @@ L'application sera accessible sur `http://localhost:3000`.
 - `npm start` : Lance l'application en mode production
 - `npm run lint` : Vérifie le code avec ESLint
 - `npm test` : Lance les tests avec Jest
+
+## Endpoints API
+
+### Authentification (`/api/auth`)
+
+#### Inscription
+```http
+POST /api/auth/register
+Content-Type: application/json
+
+{
+    "nom_complet": "John Doe",
+    "username": "johndoe",
+    "email": "john@example.com",
+    "password": "motdepasse123"
+}
+```
+
+#### Connexion
+```http
+POST /api/auth/login
+Content-Type: application/json
+
+{
+    "email": "john@example.com",
+    "password": "motdepasse123"
+}
+```
+
+#### Déconnexion
+```http
+POST /api/auth/logout
+```
+
+#### Obtenir l'utilisateur courant
+```http
+GET /api/auth/user
+Authorization: Bearer JWT_TOKEN
+```
+
+### Messages (`/api/messages`)
+
+#### Récupérer tous les messages
+```http
+GET /api/messages
+Authorization: Bearer JWT_TOKEN
+```
+
+#### Récupérer une conversation
+```http
+GET /api/messages/:recipientId
+Authorization: Bearer JWT_TOKEN
+```
+
+#### Envoyer un message
+```http
+POST /api/messages
+Authorization: Bearer JWT_TOKEN
+Content-Type: application/json
+
+{
+    "receiverId": "id_destinataire",
+    "content": "Contenu du message",
+    "type": "text" // ou "audio" pour les messages vocaux
+}
+```
+
+#### Supprimer un message
+```http
+DELETE /api/messages/:id
+Authorization: Bearer JWT_TOKEN
+```
+
+#### Marquer les messages comme lus
+```http
+PUT /api/messages/:recipientId/read
+Authorization: Bearer JWT_TOKEN
+```
+
+### Utilisateurs (`/api/users`)
+
+#### Liste des utilisateurs
+```http
+GET /api/users
+Authorization: Bearer JWT_TOKEN
+```
+
+### Pour tester avec JEST
+````
+npm test
+````

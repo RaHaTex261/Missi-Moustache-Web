@@ -6,7 +6,7 @@ const connectDB = async () => {
             useNewUrlParser: true,
             useUnifiedTopology: true
         });
-        console.log('📦 MongoDB connectée à la base admin');
+        console.log('MongoDB connectée à la base admin');
     } catch (error) {
         console.error('Erreur de connexion MongoDB:', error.message);
         process.exit(1);
