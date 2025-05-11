@@ -1,0 +1,20 @@
+graph TD
+    subgraph "Container View"
+        subgraph "Web Application"
+            UI[Interface Utilisateur\nEJS Templates] -->|HTML/CSS| CD
+            CD[Chat Dashboard\nSocket.IO Client] -->|WebSocket| API
+            UI -->|HTTP/REST| API
+        end
+        
+        API[API Service\nNode.js/Express] -->|Mongoose| DB[(MongoDB\nMessages & Users)]
+        
+        WS[WebSocket Server\nSocket.IO] -.->|Events| API
+        TS[Tenor Service\nREST API] -->|GIFs| API
+    end    
+    classDef container fill:#0066cc,stroke:#0066cc,color:white
+    classDef component fill:#003366,stroke:#003366,color:white
+    classDef database fill:#003366,stroke:#003366,color:white
+    
+    class UI,CD,API container
+    class WS,TS component
+    class DB database

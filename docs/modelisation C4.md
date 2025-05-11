@@ -1,30 +1,58 @@
-# Modélisation de l'Architecture Ndao Iresaka
+# Modélisation de l'Architecture Missi-Moustache-Web
 
 ## 1. Diagramme de Contexte (C4 - Niveau 1)
 
 ```mermaid
 graph TD
-    U[Utilisateur] -->|Utilise| NI[Ndao Iresaka]
-    NI -->|Authentifie| U
-    NI -->|Stocke données| DB[(MongoDB)]
-    NI -->|Notifications temps réel| WS[WebSocket]
+    User[Utilisateur\nPerson] -->|Utilise| WA
+    
+    subgraph "System Context"
+        WA[Web Application\nHTML/EJS/JavaScript/CSS] -->|Envoie des messages| NS[Notification System\nSocket.IO]
+        NS -->|Notifications temps réel| User
+        
+        CD[Chat Dashboard\nContainer: EJS/Socket.IO] -->|Envoie données\nJSON| WA
+        
+        WA -->|Requêtes API\nJSON| API[API Service\nContainer: Node.js/Express]
+        
+        TS[Tenor Service\nSoftware System] -->|Fournit GIFs| API
+        
+        API -->|Requêtes\nMongoose| DB[(Database\nContainer: MongoDB)]
+    end
+    
+    classDef person fill:#003366,stroke:#003366,color:white
+    classDef system fill:#gray,stroke:#gray,color:black
+    classDef container fill:#0066cc,stroke:#0066cc,color:white
+    classDef database fill:#003366,stroke:#003366,color:white
+    
+    class User person
+    class NS,TS system
+    class WA,CD,API container
+    class DB database
 ```
 
 ## 2. Diagramme de Conteneurs (C4 - Niveau 2)
 
 ```mermaid
 graph TD
-    U[Utilisateur] -->|HTTP/WS| FE[Frontend EJS]
-    FE -->|API REST| BE[Backend Node.js]
-    BE -->|Requêtes| DB[(MongoDB)]
-    BE -->|WebSocket| WS[Socket.IO]
-    WS -->|Temps réel| FE
+    subgraph "Container View"
+        subgraph "Web Application"
+            UI[Interface Utilisateur\nEJS Templates] -->|HTML/CSS| CD
+            CD[Chat Dashboard\nSocket.IO Client] -->|WebSocket| API
+            UI -->|HTTP/REST| API
+        end
+        
+        API[API Service\nNode.js/Express] -->|Mongoose| DB[(MongoDB\nMessages & Users)]
+        
+        WS[WebSocket Server\nSocket.IO] -.->|Events| API
+        TS[Tenor Service\nREST API] -->|GIFs| API
+    end    
+    classDef container fill:#0066cc,stroke:#0066cc,color:white
+    classDef component fill:#003366,stroke:#003366,color:white
+    classDef database fill:#003366,stroke:#003366,color:white
     
-    subgraph "Ndao Iresaka"
-        FE
-        BE
-        WS
-    end
+    class UI,CD,API container
+    class WS,TS component
+    class DB database
 ```
 
 ## 3. Diagramme de Composants (C4 - Niveau 3)
@@ -186,9 +214,25 @@ db.message.createIndex({ "senderId": 1, "receiverId": 1, "timestamp": -1 })
 - Indexation pour les performances
 - Validation des schémas
 
-### Sécurité
-- Hachage des mots de passe (bcrypt)
-- Authentification JWT
-- Validation des entrées
-- Protection CSRF
-- Rate limiting
+## Légende
+
+```mermaid
+graph TD
+    P[Person\nDescription] --> |Relationship\nTechnology| S[Software System\nDescription]
+    S --> C[Container\nTechnology\nDescription]
+    C --> DB[(Database\nContainer: Technology\nDescription)]
+    
+    E[External\nDescription] --> EDB[(Database\nExternal)]
+    
+    classDef person fill:#003366,stroke:#003366,color:white
+    classDef system fill:#gray,stroke:#gray,color:black
+    classDef container fill:#0066cc,stroke:#0066cc,color:white
+    classDef database fill:#003366,stroke:#003366,color:white
+    classDef external fill:#999999,stroke:#999999,color:white
+    
+    class P person
+    class S system
+    class C container
+    class DB database
+    class E,EDB external
+```

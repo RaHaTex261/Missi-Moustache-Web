@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
-const connectDB = async () => {
-    try {
-        await mongoose.connect('mongodb://localhost:27017/admin', {
+const connectDB = async () => {    try {
+        const mongoUri = process.env.MONGODB_URI || 'mongodb://mongodb:27017/admin';
+        await mongoose.connect(mongoUri, {
             useNewUrlParser: true,
-            useUnifiedTopology: true
+            useUnifiedTopology: true,
+            serverSelectionTimeoutMS: 5000
         });
         console.log('MongoDB connectée à la base admin');
     } catch (error) {

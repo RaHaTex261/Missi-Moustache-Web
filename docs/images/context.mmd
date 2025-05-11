@@ -1,0 +1,25 @@
+graph TD
+    User[Utilisateur\nPerson] -->|Utilise| WA
+    
+    subgraph "System Context"
+        WA[Web Application\nHTML/EJS/JavaScript/CSS] -->|Envoie des messages| NS[Notification System\nSocket.IO]
+        NS -->|Notifications temps réel| User
+        
+        CD[Chat Dashboard\nContainer: EJS/Socket.IO] -->|Envoie données\nJSON| WA
+        
+        WA -->|Requêtes API\nJSON| API[API Service\nContainer: Node.js/Express]
+        
+        TS[Tenor Service\nSoftware System] -->|Fournit GIFs| API
+        
+        API -->|Requêtes\nMongoose| DB[(Database\nContainer: MongoDB)]
+    end
+    
+    classDef person fill:#003366,stroke:#003366,color:white
+    classDef system fill:#gray,stroke:#gray,color:black
+    classDef container fill:#0066cc,stroke:#0066cc,color:white
+    classDef database fill:#003366,stroke:#003366,color:white
+    
+    class User person
+    class NS,TS system
+    class WA,CD,API container
+    class DB database

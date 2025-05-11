@@ -1,0 +1,25 @@
+C4Context
+title Diagramme de Contexte - Missi-Moustache-Web
+
+Person(user, "Utilisateur", "Un utilisateur de l'application de chat")
+
+System_Boundary(missi, "Missi-Moustache-Web") {
+    Container(web_app, "Application Web", "EJS, JavaScript", "Interface utilisateur du chat")
+    
+    Container(api, "Service API", "Node.js, Express", "Gère les opérations du chat et l'authentification")
+    
+    ContainerDb(db, "Base de données", "MongoDB", "Stocke les utilisateurs et messages")
+    
+    Container(ws, "WebSocket", "Socket.IO", "Gestion des communications en temps réel")
+    
+    System_Ext(tenor, "Service Tenor", "API externe", "Fournit les GIFs")
+}
+
+BiRel(user, web_app, "Utilise", "HTTPS")
+Rel(web_app, api, "Appelle", "REST API")
+Rel(web_app, ws, "Communique", "WebSocket")
+Rel(api, db, "Lit/Écrit", "Mongoose")
+Rel(api, tenor, "Récupère GIFs", "REST API")
+Rel(ws, api, "Notifie", "Events")
+
+UpdateLayoutConfig($c4ShapeInRow="3", $c4BoundaryInRow="1")

@@ -8,12 +8,12 @@ services:
     container_name: ndao-iresaka-backend
     restart: unless-stopped
     ports:
-      - "4000:4000"
+        - "4000:4000"    
     environment:
-      - NODE_ENV=production
-      - MONGODB_URI=mongodb://admin:secret@ndao-iresaka-mongodb:27017/ndao-iresaka?authSource=admin
-      - JWT_SECRET=${JWT_SECRET:-votre_secret_jwt}
-      - PORT=4000
+        - NODE_ENV=production
+        - JWT_SECRET=${JWT_SECRET:-votre_secret_jwt}
+        - PORT=4000
+        - MONGODB_URI=mongodb://mongodb:27017/admin
     volumes:
       - ./logs:/usr/src/app/logs
       - ./uploads:/usr/src/app/uploads
@@ -35,9 +35,7 @@ services:
     container_name: ndao-iresaka-mongodb
     restart: unless-stopped
     environment:
-      - MONGO_INITDB_DATABASE=ndao-iresaka
-      - MONGO_INITDB_ROOT_USERNAME=admin
-      - MONGO_INITDB_ROOT_PASSWORD=secret
+      - MONGO_INITDB_DATABASE=admin
     ports:
       - "27017:27017"
     volumes:
