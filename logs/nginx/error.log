@@ -189,3 +189,369 @@
 2025/05/11 10:11:34 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
 2025/05/11 10:11:34 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
 2025/05/11 10:11:34 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:12:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:12:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:12:35 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:13:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:13:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:13:35 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:14:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:14:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:14:35 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:15:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:15:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:15:36 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:16:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:16:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:16:36 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:17:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:17:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:17:36 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:18:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:18:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:18:36 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:19:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:19:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:19:37 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:20:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:20:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:20:37 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:21:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:21:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:21:37 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:22:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:22:37 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:22:37 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:23:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:23:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:23:38 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:24:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:24:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:24:38 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:25:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:25:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:25:38 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:26:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:26:38 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:26:38 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:27:39 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:27:39 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:27:39 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:28:39 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:28:39 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:28:39 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:29:40 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:29:40 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:29:40 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:30:40 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:30:40 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:30:40 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:31:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:31:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:31:41 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:32:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:32:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:32:41 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:33:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:33:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:33:41 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:34:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:34:41 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:34:41 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:35:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:35:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:35:42 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:36:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:36:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:36:42 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:37:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:37:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:37:42 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:38:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:38:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:38:42 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:39:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:39:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:39:43 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:40:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:40:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:40:43 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:41:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:41:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:41:43 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:42:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:42:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:42:44 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:43:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:43:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:43:44 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:44:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:44:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:44:44 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:45:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:45:44 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:45:44 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:46:45 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:46:45 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:46:45 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:47:45 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:47:45 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:47:45 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:48:45 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:48:45 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:48:45 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:49:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:49:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:49:46 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:50:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:50:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:50:46 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:51:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:51:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:51:46 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:52:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:52:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:52:46 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:53:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:53:46 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:53:46 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:54:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:54:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:54:47 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:55:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:55:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:55:47 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:56:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:56:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:56:47 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:57:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:57:47 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:57:47 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:58:48 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:58:48 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:58:48 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 10:59:48 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 10:59:48 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 10:59:48 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:00:48 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:00:48 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:00:48 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:01:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:01:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:01:49 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:02:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:02:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:02:49 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:03:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:03:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:03:49 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:04:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:04:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:04:50 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:05:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:05:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:05:50 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:06:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:06:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:06:50 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:07:51 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:07:51 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:07:51 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:08:51 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:08:51 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:08:51 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:09:51 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:09:51 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:09:51 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:10:52 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:10:52 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:10:52 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:11:52 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:11:52 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:11:52 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:12:52 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:12:52 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:12:52 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:13:53 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:13:53 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:13:53 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:14:53 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:14:53 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:14:53 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:15:53 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:15:53 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:15:53 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:16:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:16:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:16:54 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:17:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:17:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:17:54 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:18:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:18:54 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:18:54 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:19:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:19:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:19:55 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:20:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:20:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:20:55 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:21:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:21:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:21:55 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:22:56 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:22:56 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:22:56 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:23:56 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:23:56 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:23:56 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:24:57 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:24:57 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:24:57 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:25:58 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:25:58 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:25:58 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:26:58 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:26:58 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:26:58 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:27:59 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:27:59 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:27:59 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:28:59 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:28:59 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:28:59 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:30:00 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:30:00 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:30:00 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:31:01 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:31:01 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:31:01 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:32:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:32:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:32:02 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:33:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:33:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:33:02 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:34:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:34:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:34:02 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:35:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:35:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:35:03 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:36:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:36:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:36:03 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:37:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:37:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:37:03 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:38:04 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:38:04 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:38:04 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:39:04 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:39:04 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:39:04 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:40:04 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:40:04 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:40:04 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:41:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:41:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:41:05 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:42:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:42:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:42:05 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:43:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:43:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:43:05 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:44:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:44:05 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:44:05 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:45:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:45:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:45:06 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:46:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:46:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:46:06 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:47:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:47:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:47:06 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:48:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:48:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:48:06 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:49:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:49:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:49:07 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:50:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:50:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:50:07 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:51:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:51:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:51:07 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:52:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:52:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:52:08 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:53:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:53:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:53:08 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:54:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:54:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:54:09 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:55:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:55:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:55:09 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:56:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:56:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:56:09 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:57:10 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:57:10 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:57:10 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:58:10 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:58:10 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:58:10 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 11:59:10 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 11:59:10 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 11:59:10 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:00:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:00:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:00:11 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:01:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:01:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:01:11 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:02:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:02:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:02:11 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:03:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:03:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:03:11 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:04:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:04:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:04:12 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:05:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:05:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:05:12 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:06:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:06:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:06:12 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:07:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:07:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:07:13 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:08:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:08:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:08:13 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:09:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:09:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:09:13 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:10:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:10:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:10:14 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:11:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:11:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:11:14 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:12:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:12:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:12:14 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:13:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:13:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:13:15 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/11 12:14:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/11 12:14:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/11 12:14:15 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
