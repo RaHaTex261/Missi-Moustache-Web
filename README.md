@@ -1,5 +1,9 @@
 # Ndao Iresaka
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ndao-iresaka&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=ndao-iresaka)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ndao-iresaka&metric=reliability_rating)](https://sonarcloud.io/summary/new_code?id=ndao-iresaka)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ndao-iresaka&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=ndao-iresaka)
+
 ## Description
 Application de chat en temps réel avec support de messages texte et vocaux, développée avec Node.js, Express, Socket.IO et MongoDB.
 
