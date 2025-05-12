@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
 const connectDB = async () => {    try {
-        const mongoUri = process.env.MONGODB_URI || 'mongodb://mongodb:27017/admin';
+        // Utilise localhost pour npm start, mongodb pour Docker
+        const mongoUri = process.env.MONGODB_URI || 
+            (process.env.NODE_ENV === 'production' ? 'mongodb://mongodb:27017/admin' : 'mongodb://localhost:27017/admin');
+        
         await mongoose.connect(mongoUri, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
