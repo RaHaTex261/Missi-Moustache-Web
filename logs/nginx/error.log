@@ -555,3 +555,210 @@
 2025/05/11 12:14:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
 2025/05/11 12:14:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
 2025/05/11 12:14:15 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:29 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:32 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:32 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:32 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:34 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:34 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:34 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:35 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:36 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:39 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:39 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:39 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:42 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:08:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:08:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:08:49 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:09:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:09:02 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:09:02 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:09:28 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:09:28 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:09:28 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:10:19 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:10:19 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:10:19 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:11:20 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:11:20 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:11:20 [emerg] 1#1: unexpected end of file, expecting "}" in /etc/nginx/nginx.conf:112
+2025/05/12 01:14:31 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:31 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:31 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:14:33 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:33 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:33 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:14:34 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:34 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:34 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:14:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:35 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:35 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:14:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:36 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:14:40 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:40 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:40 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:14:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:43 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:43 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:14:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:14:50 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:14:50 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:15:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:15:03 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:15:03 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:26 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:26 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:26 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:27 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:27 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:27 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:28 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:28 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:28 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:29 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:30 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:30 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:30 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:32 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:32 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:32 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:36 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:42 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:16:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:16:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:16:55 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:17:21 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:17:21 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:17:21 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:18:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:18:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:18:13 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:19:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:19:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:19:13 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:20:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:20:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:20:13 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:21:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:21:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:21:13 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:22:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:22:14 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:22:14 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:25 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:25 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:25 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:27 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:27 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:27 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:28 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:28 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:28 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:29 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:30 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:30 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:30 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:32 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:32 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:32 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:36 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:42 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:42 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:23:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:23:55 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:23:55 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:24:21 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:24:21 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:24:21 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:25:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:37
+2025/05/12 01:25:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:38
+2025/05/12 01:25:13 [emerg] 1#1: no "ssl_certificate" is defined for the "listen ... ssl" directive in /etc/nginx/nginx.conf:36
+2025/05/12 01:26:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:26:13 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:26:13 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:15 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:17 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:17 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:17 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:19 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:19 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:19 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:21 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:21 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:21 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:23 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:23 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:23 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:25 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:25 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:25 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:29 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:29 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:36 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:36 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:27:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:27:49 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:27:49 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:28:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:28:15 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:28:15 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:29:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:29:06 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:29:06 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:30:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:30:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:30:07 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:31:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:31:07 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:31:07 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:32:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:32:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:32:08 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:33:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:33:08 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:33:08 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:34:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:34:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:34:09 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:35:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:35:09 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:35:09 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:36:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:36:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:36:11 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:37:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:37:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:37:11 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:38:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:38:11 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:38:11 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)
+2025/05/12 01:39:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:48
+2025/05/12 01:39:12 [warn] 1#1: the "listen ... http2" directive is deprecated, use the "http2" directive instead in /etc/nginx/nginx.conf:49
+2025/05/12 01:39:12 [emerg] 1#1: cannot load certificate "/etc/letsencrypt/live/localhost/fullchain.pem": BIO_new_file() failed (SSL: error:80000002:system library::No such file or directory:calling fopen(/etc/letsencrypt/live/localhost/fullchain.pem, r) error:10000080:BIO routines::no such file)

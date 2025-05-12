@@ -27,7 +27,9 @@ services:
       retries: 3
       start_period: 30s
     networks:
-      - ndao-network
+      - backend-db  # Pour communiquer avec MongoDB
+      - backend-cache  # Pour communiquer avec Redis
+      - backend-web  # Pour communiquer avec Nginx
 
   # Service MongoDB
   mongodb:
@@ -50,7 +52,7 @@ services:
       retries: 3
       start_period: 40s
     networks:
-      - ndao-network
+      - backend-db
 
   # Service Nginx (Frontend + Reverse Proxy)
   nginx:
@@ -71,7 +73,8 @@ services:
     depends_on:
       - backend
     networks:
-      - ndao-network
+      - backend-web
+      - web
 
   # Service Redis pour le cache et les sessions
   redis:
@@ -89,7 +92,7 @@ services:
       timeout: 10s
       retries: 3
     networks:
-      - ndao-network
+      - backend-cache
 
   # Service Certbot pour SSL
   certbot:
@@ -101,6 +104,8 @@ services:
     depends_on:
       - nginx
     command: certonly --webroot -w /var/www/certbot --force-renewal --email ${SSL_EMAIL:-admin@example.com} -d ${DOMAIN:-localhost} --agree-tos --non-interactive
+    networks:
+      - web
 
 volumes:
   mongodb_data:
@@ -111,5 +116,13 @@ volumes:
     driver: local
 
 networks:
-  ndao-network:
+  backend-db:
+    driver: bridge
+    internal: true  # Réseau interne uniquement
+  backend-cache:
+    driver: bridge
+    internal: true  # Réseau interne uniquement
+  backend-web:
+    driver: bridge
+  web:
     driver: bridge
